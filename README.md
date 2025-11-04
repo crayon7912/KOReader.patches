@@ -1,4 +1,5 @@
 # KOReader.patches
+
 Some of the patches I created for the default Coverbrowser in KOReader.
 
 All these patches are tested on KOReader 2025.10 "Ghost" and works perfectly.
@@ -16,7 +17,12 @@ Please [check the guide here.](https://koreader.rocks/user_guide/#L2-userpatches
 <img width="480" height="191" alt="Rounded corners" src="https://github.com/user-attachments/assets/c52f7fe7-e519-422f-9321-65b9e5afebe2" />
 
 This patch adds rounded corners to book covers in mosaic menu view.
+
 Download the icons folder (bw/coloured) and place the icons in koreader/icons
+
+Currently the rounded corners make the 'description hint tag' on the top right side of the book to become detached from the cover due to rounding off.
+
+For now I turn off the "Show hint for books with description" so it looks clean, I may make a fix for this in the future.
 
 ## 🞂 2-faded-finished-books.lua
 
