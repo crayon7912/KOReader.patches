@@ -1,5 +1,6 @@
 # KOReader.patches
 Some of the patches I created for the default Coverbrowser in KOReader.
+
 All these patches are tested on KOReader 2025.10 "Ghost" and works perfectly.
 
 ## 🞂 How to install a user patch ?
