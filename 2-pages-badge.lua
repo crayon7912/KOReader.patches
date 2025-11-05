@@ -4,13 +4,13 @@ User patch for Cover Browser plugin to add page count badges for unread books
 local Blitbuffer = require("ffi/blitbuffer")
 
 --========================== [[Edit your preferences here]] ================================
-local page_font_size = 0.9 -- Adjust from 0 to 1
-local page_text_color = Blitbuffer.COLOR_WHITE -- Choose your desired color
-local border_thickness = 2 -- Adjust from 0 to 5
-local border_corner_radius = 10 -- Adjust from 0 to 20
-local border_color = Blitbuffer.COLOR_DARK_GRAY -- Choose your desired color
-local background_color = Blitbuffer.COLOR_GRAY_3 -- Choose your desired color
-local move_from_border = 8 -- Choose how far in the badge should sit
+local page_font_size = 0.9 						-- Adjust from 0 to 1
+local page_text_color = Blitbuffer.COLOR_WHITE 	-- Choose your desired color
+local border_thickness = 2 						-- Adjust from 0 to 5
+local border_corner_radius = 10 				-- Adjust from 0 to 20
+local border_color = Blitbuffer.COLOR_DARK_GRAY	-- Choose your desired color
+local background_color = Blitbuffer.COLOR_GRAY_3-- Choose your desired color
+local move_from_border = 8 						-- Choose how far in the badge should sit
 
 --==========================================================================================
 
@@ -104,5 +104,4 @@ local function patchCoverBrowserPageCount(plugin)
 end
 
 userpatch.registerPatchPluginFunc("coverbrowser", patchCoverBrowserPageCount)
-
 --======================================================================================
