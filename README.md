@@ -9,12 +9,12 @@ Please [check the guide here.](https://koreader.rocks/user_guide/#L2-userpatches
 
 ## Screenshot of final look
 
-<img width="720" height="990" alt="Screenshot_20251105-093346" src="https://github.com/user-attachments/assets/54a08aaa-bddd-43a7-8e55-51e8aee456e0" />
+<img width="720" height="990" alt="Overall Look" src="https://github.com/user-attachments/assets/890b7288-31d1-4e44-82d6-399eda54e112" />
 
 
 ## 🞂 2--rounded-corners.lua
 
-<img width="720" height="325" alt="Screenshot_20251105-092651" src="https://github.com/user-attachments/assets/ec817115-4d42-404f-855e-8b342f07a989" />
+<img width="720" height="325" alt="Rounded corners to book covers" src="https://github.com/user-attachments/assets/ed550b96-a4dc-4354-9e91-c38195d9596f" />
 
 This patch adds rounded corners to book covers in mosaic menu view.
 
@@ -23,7 +23,7 @@ Download the icons `rounded.corner.bl.svg`, `rounded.corner.tl.svg`, `rounded.co
 
 ## 🞂 2-faded-finished-books.lua
 
-<img width="720" height="325" alt="Screenshot_20251105-092832" src="https://github.com/user-attachments/assets/f78b9114-cdfb-4f3d-94e3-43c433154e64" />
+<img width="720" height="325" alt="Faded look to finished books" src="https://github.com/user-attachments/assets/a7b3903c-51a2-439d-a990-296871325148" />
 
 This adds a faded look to the finished books. Adjust the fading amount to your liking by editing the .lua file.
 
@@ -42,7 +42,7 @@ Just copy the respective `dogear.abandoned.svg`, `dogear.reading.svg` and `dogea
 
 ## 🞂 2-pages-badge.lua
 
-<img width="720" height="143" alt="Screenshot_20251105-093606" src="https://github.com/user-attachments/assets/24cd6798-1615-4276-8ed6-d631f0016202" />
+<img width="720" height="143" alt="Pages Badge" src="https://github.com/user-attachments/assets/24cd6798-1615-4276-8ed6-d631f0016202" />
 
 
 This patch adds the page number of a book to its cover on the bottom left as a small rounded badge. 
@@ -54,7 +54,7 @@ This patch adds the page number of a book to its cover on the bottom left as a s
 
 ## 🞂 2-progress-badge.lua
 
-<img width="720" height="143" alt="Screenshot_20251105-093752" src="https://github.com/user-attachments/assets/30519602-0c08-46e4-a6b0-82e21285a482" />
+<img width="720" height="143" alt="Progress badge" src="https://github.com/user-attachments/assets/04b70470-d8a2-4fe8-b6f2-d981630bcf3f" />
 
 
 This patch adds the progress percentage of a book as a badge in the top right corner of the cover.
@@ -65,9 +65,8 @@ Copy the `2-progress-badge.lua` to `koreader/patches` and copy the `progress.bad
 
 ## 🞂 2-series-indicator.lua
 
-<img width="1440" height="285" alt="Screenshot_20251105-111423" src="https://github.com/user-attachments/assets/6d2a812e-2793-474f-8e08-e1a6e731616b" />
+<img width="720" height="143" alt="Series indicator" src="https://github.com/user-attachments/assets/6d2a812e-2793-474f-8e08-e1a6e731616b" />
 
 This patch adds a small rectangular indicator to the top right of the book cover to mean that the book is part of a series. 
 
-For this to work seamlessly I suggest to uncheck the "Show hint for books with description" from ""Settings 🞂 Mosaid and detailed list settings 🞂 Display hints " so it looks clean.
-
+For this to work seamlessly I suggest to uncheck the "Show hint for books with description" from ""Settings 🞂 Mosaic and detailed list settings 🞂 Display hints " so it looks clean.
