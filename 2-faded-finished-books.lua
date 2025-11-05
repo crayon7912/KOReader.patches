@@ -27,13 +27,13 @@ local function patchCoverBrowserFaded(plugin)
     
     -- Override paintTo method to add faded look for finished books
     function MosaicMenuItem:paintTo(bb, x, y)
-        -- First, call the original paintTo method to draw the cover normally
+        -- Call the original paintTo method to draw the cover normally
         originalMosaicMenuItemPaintTo(self, bb, x, y)
         
         -- Get the cover image widget (target)
         local target = self.cover_image or self[1]
         
-        -- ==== ADD faded look to finished books ====
+        -- ADD faded look to finished books
         if target and target.dimen and self.status == "complete" then
             -- Calculate cover position and dimensions
             local fx = x + math.floor((self.width - target.dimen.w) / 2)
@@ -45,9 +45,7 @@ local function patchCoverBrowserFaded(plugin)
         end
     end
 
-    -- Alternative: Also patch the init method to debug status field
     local originalMosaicMenuItemInit = MosaicMenuItem.init
-    
     function MosaicMenuItem:init(item)
         originalMosaicMenuItemInit(self, item)
     end
@@ -55,5 +53,4 @@ local function patchCoverBrowserFaded(plugin)
 end
 
 userpatch.registerPatchPluginFunc("coverbrowser", patchCoverBrowserFaded)
-
 --======================================================================================
