@@ -6,8 +6,8 @@ User patch for Cover Browser plugin to add progress percentage badges in top rig
 local text_size = 0.45 	-- Adjust from 0 to 1
 local move_on_x = 5		-- Adjust how far left the badge should sit. 
 local move_on_y = -2	-- Adjust how far up the badge should sit.
-local badge_w = 65
-local badge_h = 35
+local badge_w = 65		-- Adjust badge width
+local badge_h = 35		-- Adjust badge height
 
 --==========================================================================================
 local userpatch = require("userpatch")
@@ -67,14 +67,13 @@ local function patchCoverBrowserProgressPercent(plugin)
 			}
 			
 			if percent_widget and target and not self.is_directory then
-				-- Tweak these to change size & position
-				local BADGE_W  = Screen:scaleBySize(badge_w)   -- badge width
-				local BADGE_H  = Screen:scaleBySize(badge_h)   -- badge height
-				local INSET_X  = Screen:scaleBySize(move_on_x)    -- push inward from the right edge
-				local INSET_Y  = Screen:scaleBySize(move_on_y) 	  -- sit on the inner top edge
-				local TEXT_PAD = Screen:scaleBySize(6)    -- breathing room inside the badge
+				local BADGE_W  = Screen:scaleBySize(badge_w)	-- badge width
+				local BADGE_H  = Screen:scaleBySize(badge_h)	-- badge height
+				local INSET_X  = Screen:scaleBySize(move_on_x)	-- push inward from the right edge
+				local INSET_Y  = Screen:scaleBySize(move_on_y)	-- sit on the inner top edge
+				local TEXT_PAD = Screen:scaleBySize(6)    		-- breathing room inside the badge
 	
-				-- Outer frame (includes border)
+				-- Outer frame
 				local fx = x + math.floor((self.width  - target.dimen.w) / 2)
 				local fy = y + math.floor((self.height - target.dimen.h) / 2)
 				local fw = target.dimen.w
@@ -89,8 +88,6 @@ local function patchCoverBrowserProgressPercent(plugin)
 	
 				-- Paint the SVG badge
 				percent_badge:paintTo(bb, bx, by)
-	
-				-- Make sure the text fits; center it
 				percent_widget.alignment = "center"
 				percent_widget.truncate_with_ellipsis = false
 				percent_widget.max_width = BADGE_W - 2 * TEXT_PAD
