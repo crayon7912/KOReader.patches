@@ -22,7 +22,7 @@ Download the icons `rounded.corner.bl.svg`, `rounded.corner.tl.svg`, `rounded.co
 
 Currently the rounded corners make the `description hint tag` on the top right side of the book to become detached from the cover due to rounding off.
 
-For now I uncheck the "Show hint for books with description" from ""Settings > Mosaid and detailed list settings > Display hints " so it looks clean, I may make a fix for this in the future.
+For now I uncheck the "Show hint for books with description" from ""Settings 🞂 Mosaid and detailed list settings 🞂 Display hints " so it looks clean, I may make a fix for this in the future.
 
 
 ## 🞂 2-faded-finished-books.lua
@@ -51,9 +51,9 @@ Just copy the respective `dogear.abandoned.svg`, `dogear.reading.svg` and `dogea
 
 This patch adds the page number of a book to its cover on the bottom left as a small rounded badge. 
 
-It parses the page number from the title of the file, in the following formats `P(123)` or `p(123)`. So make sure your book's title contains the page number in this format.
+**IMPORTANT:** It parses the page number from the title of the file, in the following formats `P(123)` or `p(123)`. So make sure your book's title contains the page number in this format.
 
-Page number's font, color, backgroud color, border thickness, rounded corner radius can be adjusted to your liking in the .lua file.
+**NOTE:** Page number's font size, color, backgroud color, border thickness, rounded corner radius can be adjusted to your liking in the .lua file.
 
 
 ## 🞂 2-progress-badge.lua
@@ -63,4 +63,6 @@ Page number's font, color, backgroud color, border thickness, rounded corner rad
 
 This patch adds the progress percentage of a book as a badge in the top right corner of the cover.
 
-Copy the `2-progress-badge.lua` to `koreader/patches` and copy the `progress.badge.svg` to `koreader/icons` folder of your e-reader. You can choose coloured or bw icons based on your liking.
+Copy the `2-progress-badge.lua` to `koreader/patches` and copy the `progress.badge.svg` to `koreader/icons` folder of your e-reader. You can choose coloured or bw icons based on your device/liking.
+
+**NOTE:** Progress badge's size, location, text size can be adjusted to your liking in the .lua file.
