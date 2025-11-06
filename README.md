@@ -1,8 +1,10 @@
 # KOReader.patches
 
-Some of the patches I created for the default Coverbrowser in KOReader.
+Some of the patches I created for the default Coverbrowser in KOReader and Project: Title plugin.
 
-All these patches are tested on KOReader 2025.10 "Ghost" and works perfectly.
+**NOTE: Patches with 'for-PT' in their filenames are only for Project: Title plugin. For coverbrowser download the ones normal ones without 'for-PT'.**
+
+All these patches are tested on KOReader 2025.10 "Ghost" and Project: Title v3.4 and works perfectly.
 
 ## 🞂 How to install a user patch ?
 Please [check the guide here.](https://koreader.rocks/user_guide/#L2-userpatches)
