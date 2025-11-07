@@ -4,7 +4,7 @@ Some of the patches I created for the default Coverbrowser in KOReader and Proje
 
 **NOTE: Patches with 'for-PT' in their filenames are only for Project: Title plugin. For coverbrowser download the ones normal ones without 'for-PT'.**
 
-All these patches are tested on KOReader 2025.10 "Ghost" and Project: Title v3.4 and works perfectly.
+All these patches are tested on KOReader 2025.10 "Ghost" and Project: Title v3.5 and works perfectly.
 
 ## 🞂 How to install a user patch ?
 Please [check the guide here.](https://koreader.rocks/user_guide/#L2-userpatches)
@@ -71,4 +71,13 @@ Copy the `2-progress-badge.lua` to `koreader/patches` and copy the `progress.bad
 
 This patch adds a small rectangular indicator to the top right of the book cover to mean that the book is part of a series. 
 
-For this to work seamlessly I suggest to uncheck the "Show hint for books with description" from ""Settings 🞂 Mosaic and detailed list settings 🞂 Display hints " so it looks clean.
+For this to work seamlessly I suggest to uncheck the "Show hint for books with description" from "Settings 🞂 Mosaic and detailed list settings 🞂 Display hints" so it looks clean.
+
+## 🞂 2-new-progress-bar-for-PT.lua
+
+<img width="480" height="150" alt="image" src="https://github.com/user-attachments/assets/8ccd0634-3135-44c9-a939-0cad2957da01" />
+
+This patch adds a clean rounded rectangular progress bar to the bottom of the cover. This disables the default progress bar of Project: Title. 
+
+For this to work as intended, it is suggested to uncheck all options in "Project: Title Settings 🞂 Advanced settings 🞂 Book display 🞂" so they don't clash. 
+
