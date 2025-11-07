@@ -49,7 +49,7 @@ Just copy the respective `dogear.abandoned.svg`, `dogear.reading.svg` and `dogea
 
 This patch adds the page number of a book to its cover on the bottom left as a small rounded badge. 
 
-**IMPORTANT:** It parses the page number from the title of the file, in the following formats `P(123)` or `p(123)`. So make sure your book's title contains the page number in this format.
+**IMPORTANT:** This patch parses the page number from Project Title's database or from the title of the file, in the following formats `P(123)` or `p(123)`. So make sure your book's title contains the page number in this format if you are using coverbrowser. (I'll work on improving page detection mechanism for coverbrowser soon)
 
 **NOTE:** Page number's font size, color, backgroud color, border thickness, rounded corner radius can be adjusted to your liking in the .lua file.
 
