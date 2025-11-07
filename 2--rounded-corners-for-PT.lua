@@ -56,8 +56,6 @@ local function patchBookCoverRoundedCorners(plugin)
 
         if not ok then error(err) end
         
-        -- Thin border that hugs the cover, before corner SVGs
-
         if target and target.dimen then
             -- Outer frame rect (already centered)
             local fx = x + math.floor((self.width  - target.dimen.w) / 2)
