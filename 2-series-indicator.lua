@@ -1,4 +1,4 @@
---[[ Patch to add series indicator to the right side of the book cover ]]--
+--[[ Patch for KOReader to add series indicator to the right side of the book cover ]]--
 local userpatch = require("userpatch")
 local logger = require("logger")
 local TextWidget = require("ui/widget/textwidget")
@@ -75,3 +75,4 @@ local function patchAddSeriesIndicator(plugin)
     end
 end
 userpatch.registerPatchPluginFunc("coverbrowser", patchAddSeriesIndicator)
+
