@@ -87,14 +87,14 @@ local function patchDisableUIElements(plugin)
             original_properties.background = target.background  
             original_properties.color = target.color
             original_properties.padding = target.padding
-  
+    
             target.bordersize = 0
             target.background = nil
             target.color = nil
             target.padding = 0
         end
         
-        -- Store original reading status
+        -- Store original reading status (ONCE)
         local original_status = self.status
         local original_percent = self.percent_finished
         local original_progress_bar = self.show_progress_bar
@@ -107,7 +107,7 @@ local function patchDisableUIElements(plugin)
         -- Disable Progress Bar
         local orig_ProgressWidget_paint = ProgressWidget.paintTo
         ProgressWidget.paintTo = function() end
-
+    
         -- Disable progress percentage text and other UI elements
         local BookInfoManager = require("bookinfomanager")
         
@@ -140,16 +140,10 @@ local function patchDisableUIElements(plugin)
         BookInfoManager:saveSetting("hide_file_info", true)
         BookInfoManager:saveSetting("show_pages_read_as_progress", false)
         
-        -- Disable status widget creation
-        local original_status = self.status
-        if original_status == "complete" or original_status == "abandoned" then
-            self.status = nil
-        end
-        
         -- Call original paint method
         orig_MosaicMenuItem_paint(self, bb, x, y)
         
-        -- Restore everything
+        -- Restore everything (ONCE)
         if target and original_properties.bordersize then
             target.bordersize = original_properties.bordersize
             target.background = original_properties.background
@@ -157,17 +151,12 @@ local function patchDisableUIElements(plugin)
             target.padding = original_properties.padding
         end
         
-        -- Restore original status
+        -- Restore original status (ONCE)
         self.status = original_status
         self.percent_finished = original_percent
         self.show_progress_bar = original_progress_bar
         
-        ProgressWidget.paintTo = orig_ProgressWidget_paint   
-
-        if original_status then
-            self.status = original_status
-        end
-        return
+        ProgressWidget.paintTo = orig_ProgressWidget_paint
     end
 end
 
