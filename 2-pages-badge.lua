@@ -1,4 +1,4 @@
---[[ User patch for Cover Browser plugin to add page count badges for unread books ]]--
+--[[ User patch for KOReader to add page count badges for unread books ]]--
 local Blitbuffer = require("ffi/blitbuffer")
 
 --========================== [[Edit your preferences here]] ================================
