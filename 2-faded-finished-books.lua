@@ -1,4 +1,4 @@
---[[ User patch for Project: Title plugin to add faded look for finished books in mosaic view ]]--
+--[[ User patch for KOReader to add faded look for finished books in mosaic view ]]--
 
 --========================== Edit your preferences here ================================
 local fading_amount = 0.5 --Set your desired value from 0 to 1.
