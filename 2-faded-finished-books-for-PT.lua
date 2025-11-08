@@ -1,7 +1,7 @@
 --[[ User patch for Project: Title plugin to add faded look for finished books in mosaic view ]]--
 
 --========================== Edit your preferences here ================================
-local fading_amount = 0.66 --Set your desired value from 0 to 1.
+local fading_amount = 0.5 --Set your desired value from 0 to 1.
 --======================================================================================
 
 --========================== Do not modify this section ================================
@@ -14,14 +14,14 @@ local function patchCoverBrowserFaded(plugin)
     local MosaicMenuItem = userpatch.getUpValue(MosaicMenu._updateItemsBuildUI, "MosaicMenuItem")
     
     -- Store original MosaicMenuItem paintTo method
-    local origMosaicMenuItemPaintTo = MosaicMenuItem.paintTo
+    local orig_MosaicMenuItem_paint = MosaicMenuItem.paintTo
     
     function MosaicMenuItem:paintTo(bb, x, y)
         -- Paint normally first
-        origMosaicMenuItemPaintTo(self, bb, x, y)
+        orig_MosaicMenuItem_paint(self, bb, x, y)
 
         -- Only apply fade once per item using a flag
-        if not self._fade_applied and self.status == "complete" then
+        if self.status == "complete" then
             -- Try to locate the same "target" the base code uses
             local target = nil
             if self[1] and self[1][1] and self[1][1][1] then
@@ -42,7 +42,6 @@ local function patchCoverBrowserFaded(plugin)
 
                 -- Apply the fade only once
                 bb:lightenRect(fx, fy, tw, th, fading_amount)
-                self._fade_applied = true
             end
         end
     end
