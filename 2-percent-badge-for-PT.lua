@@ -28,12 +28,12 @@ local function patchCoverBrowserProgressPercent(plugin)
     local MosaicMenuItem = userpatch.getUpValue(MosaicMenu._updateItemsBuildUI, "MosaicMenuItem")
     
     -- Store original MosaicMenuItem paintTo method
-    local origMosaicMenuItemPaintTo = MosaicMenuItem.paintTo
+    local orig_MosaicMenuItem_paint = MosaicMenuItem.paintTo
     
     -- Override paintTo method to add progress percentage badges
     function MosaicMenuItem:paintTo(bb, x, y)
         -- Call the original paintTo method to draw the cover normally
-        origMosaicMenuItemPaintTo(self, bb, x, y)
+        orig_MosaicMenuItem_paint(self, bb, x, y)
         
         -- Get the cover image widget
         local target = self[1][1][1]
