@@ -56,7 +56,7 @@ local function patchDisableUIElements(plugin)
         
         if self[1] and type(self[1]) == "table" and self[1].text then
             local text = self[1].text
-            if text:match("^%s*%d+%s*$") then
+            if text:match("^#%s*%d+%s*$") then
                 return
             end
         end
