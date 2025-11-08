@@ -54,16 +54,16 @@ This patch adds the page number of a book to its cover on the bottom left as a s
 **NOTE:** Page number's font size, color, backgroud color, border thickness, rounded corner radius can be adjusted to your liking in the .lua file.
 
 
-## 🞂 2-progress-badge.lua
+## 🞂 2-percent-badge.lua
 
 <img width="720" height="143" alt="Progress badge" src="https://github.com/user-attachments/assets/04b70470-d8a2-4fe8-b6f2-d981630bcf3f" />
 
 
 This patch adds the progress percentage of a book as a badge in the top right corner of the cover.
 
-Copy the `2-progress-badge.lua` to `koreader/patches` and copy the `progress.badge.svg` to `koreader/icons` folder of your e-reader. You can choose coloured or bw icons based on your device/liking.
+Copy the `2-percent-badge.lua` to `koreader/patches` and copy the `percent.badge.svg` to `koreader/icons` folder of your e-reader. You can choose coloured or bw icons based on your device/liking.
 
-**NOTE:** Progress badge's size, location, text size can be adjusted to your liking in the .lua file.
+**NOTE:** Percent badge's size, location, text size can be adjusted to your liking in the .lua file.
 
 ## 🞂 2-series-indicator.lua
 
@@ -72,6 +72,10 @@ Copy the `2-progress-badge.lua` to `koreader/patches` and copy the `progress.bad
 This patch adds a small rectangular indicator to the top right of the book cover to mean that the book is part of a series. 
 
 For this to work seamlessly I suggest to uncheck the "Show hint for books with description" from "Settings 🞂 Mosaic and detailed list settings 🞂 Display hints" so it looks clean.
+
+## 🞂 2-disable-all-PT-widgets.lua
+
+This patch disables all the progress and status related widgets such as, progress bar, percent read, pages read and status icon from the book's cover, giving us a clean cover. This helps to draw the new widgets with ease.
 
 ## 🞂 2-new-progress-bar-for-PT.lua
 
