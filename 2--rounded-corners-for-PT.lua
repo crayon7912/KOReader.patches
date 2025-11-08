@@ -35,27 +35,16 @@ local function patchBookCoverRoundedCorners(plugin)
         _corner_w, _corner_h = sz.w, sz.h
     end
 	
-    local origPaint = MosaicMenuItem.paintTo
+    local orig_MosaicMenuItem_paint = MosaicMenuItem.paintTo
 
     function MosaicMenuItem:paintTo(bb, x, y)
+	
+		-- First, call the original paintTo method to draw the cover normally
+		orig_MosaicMenuItem_paint(self, bb, x, y)
+		
         -- Locate the cover frame widget as the base code does
         local target = self[1][1][1]
-
-        -- Temporarily disable the current border
-        local old_border, old_bg, old_color, old_pad
-        if target then
-            old_border, old_bg, old_color, old_pad =
-                target.bordersize, target.background, target.color, target.padding
-            target.bordersize = 0
-            target.background = nil
-            target.color      = nil
-        end
-
-        -- Paint the original item safely
-        local ok, err = pcall(origPaint, self, bb, x, y)
-
-        if not ok then error(err) end
-        
+      
         if target and target.dimen then
             -- Outer frame rect (already centered)
             local fx = x + math.floor((self.width  - target.dimen.w) / 2)
