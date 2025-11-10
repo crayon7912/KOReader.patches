@@ -82,6 +82,10 @@ Copy the `2-percent-badge.lua` to `koreader/patches` and copy the `percent.badge
 
 This patch adds a small rectangular indicator to the top right of the book cover to mean that the book is part of a series.
 
+## 2-series-badge-numbered.lua
+<img width="480" height="140" alt="msrdc_nTY5fVGvfJ" src="https://github.com/user-attachments/assets/56539347-a408-434c-bfb0-41290449bf24" />
+
+This patch adds a small rounded series badge to the top right of the book cover to show the series number.
 
 ## 🞂 2-new-progress-bar.lua
 
