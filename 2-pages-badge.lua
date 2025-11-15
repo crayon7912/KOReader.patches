@@ -60,7 +60,7 @@ local function patchCoverBrowserPageCount(plugin)
             if not page_count then
                 page_count = nil
                 if self.text then
-                    page_count = self.text:match("[Pp]?%(?[Pp]?(%d+)%)?")
+                    page_count = self.text:match("[Pp]%((%d+)%)")
                 end
             end
             
