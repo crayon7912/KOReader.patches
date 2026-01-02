@@ -2,7 +2,9 @@
 
 Some of the patches I created for KOReader (works with both Coverbrowser and Project: Title plugin).
 
-**NOTE: If you want to use any of these patches, first you MUST install the `2--disable-all-CB-widgets.lua` for Coverbrowser or `2--disable-all-PT-widgets.lua` for Project: Title. Otherwise the patches may not work properly.**
+**NOTE 1: Make sure you download the .lua files correctly using the download button. Please do not right click the file and 'save as', it won't work that way.**
+
+**NOTE 2: If you want to use any of these patches, first you MUST install the `2--disable-all-CB-widgets.lua` for Coverbrowser or `2--disable-all-PT-widgets.lua` for Project: Title. Otherwise the patches may not work properly.**
 
 All the .lua files should go into `koreader/patches` and all the .svg files should go into `koreader/icons` folder of your e-reader.
 
