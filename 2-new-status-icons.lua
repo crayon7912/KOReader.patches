@@ -44,9 +44,18 @@ local function patchCoverBrowserStatusIcons(plugin)
         orig_MosaicMenuItem_paint(self, bb, x, y)
         
         -- Now draw our transparent status icons
-        if (self.do_hint_opened and self.been_opened and self.percent_finished) or 
-   (self.menu.name == "history" and self.percent_finished) or (self.menu.name == "collections" and self.percent_finished) then
-          
+        if
+          self.status == "complete"
+          or self.status == "abandoned"
+          or (
+            self.percent_finished
+            and (
+              (self.do_hint_opened and self.been_opened)
+              or self.menu.name == "history"
+              or self.menu.name == "collections"
+            )
+          )
+        then
             local target = self[1][1][1]
             
             -- Calculate icon size
