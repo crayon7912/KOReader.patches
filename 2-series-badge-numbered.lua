@@ -10,15 +10,16 @@ local BD = require("ui/bidi")
 local Blitbuffer = require("ffi/blitbuffer")
 local Size = require("ui/size")
 
+-- stylua: ignore start
 --========================== [[Edit your preferences here]] ================================
-local font_size = 11 -- Adjust from 0 to 1
-local border_thickness = 1 -- Adjust from 0 to 5
-local border_corner_radius = 9 -- Adjust from 0 to 20
-local text_color = Blitbuffer.colorFromString("#000000") -- Choose your desired color
+local font_size = 11                                       -- Adjust from 0 to 1
+local border_thickness = 1                                 -- Adjust from 0 to 5
+local border_corner_radius = 9                             -- Adjust from 0 to 20
+local text_color = Blitbuffer.colorFromString("#000000")   -- Choose your desired color
 local border_color = Blitbuffer.colorFromString("#000000") -- Choose your desired color
-local background_color = Blitbuffer.COLOR_GRAY_E -- Choose your desired color
-
+local background_color = Blitbuffer.COLOR_GRAY_E           -- Choose your desired color
 --==========================================================================================
+-- stylua: ignore end
 
 -- Caching for series indicators to avoid repeated calculations
 local series_badge_cache = {}

@@ -1,14 +1,16 @@
 --[[ User patch for KOReader to add progress percentage badges in top right corner of cover ]]
 --
+
+-- stylua: ignore start
 --========================== [[Edit your preferences here]] ================================
-
 local text_size = 0.42 -- Adjust from 0 to 1
-local move_on_x = 5 -- Adjust how far left the badge should sit.
-local move_on_y = -2 -- Adjust how far up the badge should sit.
-local badge_w = 70 -- Adjust badge width
-local badge_h = 32 -- Adjust badge height
-
+local move_on_x = 5    -- Adjust how far left the badge should sit.
+local move_on_y = -2   -- Adjust how far up the badge should sit.
+local badge_w = 70     -- Adjust badge width
+local badge_h = 32     -- Adjust badge height
 --==========================================================================================
+-- stylua: ignore end
+
 local Font = require("ui/font")
 local FrameContainer = require("ui/widget/container/framecontainer")
 local TextWidget = require("ui/widget/textwidget")

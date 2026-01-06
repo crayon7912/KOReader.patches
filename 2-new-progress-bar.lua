@@ -9,18 +9,20 @@ local FrameContainer = require("ui/widget/container/framecontainer")
 local ImageWidget = require("ui/widget/imagewidget")
 local ProgressWidget = require("ui/widget/progresswidget")
 
+-- stylua: ignore start
 --========================== Edit your preferences here ================================
-local BAR_H = Screen:scaleBySize(9) -- bar height
-local BAR_RADIUS = Screen:scaleBySize(3) -- rounded ends
-local INSET_X = Screen:scaleBySize(6) -- from inner cover edges
-local INSET_Y = Screen:scaleBySize(12) -- from bottom inner edge
-local GAP_TO_ICON = Screen:scaleBySize(0) -- gap before corner icon
-local TRACK_COLOR = Blitbuffer.colorFromString("#F4F0EC") -- bar color
-local FILL_COLOR = Blitbuffer.colorFromString("#555555") -- fill color
+local BAR_H = Screen:scaleBySize(9)                           -- bar height
+local BAR_RADIUS = Screen:scaleBySize(3)                      -- rounded ends
+local INSET_X = Screen:scaleBySize(6)                         -- from inner cover edges
+local INSET_Y = Screen:scaleBySize(12)                        -- from bottom inner edge
+local GAP_TO_ICON = Screen:scaleBySize(0)                     -- gap before corner icon
+local TRACK_COLOR = Blitbuffer.colorFromString("#F4F0EC")     -- bar color
+local FILL_COLOR = Blitbuffer.colorFromString("#555555")      -- fill color
 local ABANDONED_COLOR = Blitbuffer.colorFromString("#C0C0C0") -- fill when abandoned/paused
-local BORDER_W = Screen:scaleBySize(0.5) -- border width around track (0 to disable)
-local BORDER_COLOR = Blitbuffer.COLOR_BLACK -- border color
+local BORDER_W = Screen:scaleBySize(0.5)                      -- border width around track (0 to disable)
+local BORDER_COLOR = Blitbuffer.COLOR_BLACK                   -- border color
 --======================================================================================
+-- stylua: ignore end
 
 --========================== Do not modify this section ================================
 local function patchCustomProgress(plugin)
