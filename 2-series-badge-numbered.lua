@@ -7,6 +7,7 @@ local userpatch = require("userpatch")
 local Screen = require("device").screen
 local BD = require("ui/bidi")
 local Blitbuffer = require("ffi/blitbuffer")
+local logger = require("logger")
 
 -- stylua: ignore start
 --========================== [[Edit your preferences here]] ================================
@@ -22,11 +23,13 @@ local background_color = Blitbuffer.COLOR_GRAY_E           -- Choose your desire
 local function patchAddSeriesIndicator(plugin)
     local MosaicMenu = require("mosaicmenu")
     local MosaicMenuItem = userpatch.getUpValue(MosaicMenu._updateItemsBuildUI, "MosaicMenuItem")
-    local BookInfoManager = require("bookinfomanager")
 
-    if not MosaicMenuItem then
+    if MosaicMenuItem.patched_series_badge then
         return
     end
+    MosaicMenuItem.patched_series_badge = true
+
+    local BookInfoManager = require("bookinfomanager")
 
     -- Store original methods
     local orig_MosaicMenuItem_init = MosaicMenuItem.init

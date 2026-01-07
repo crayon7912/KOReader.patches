@@ -12,21 +12,23 @@ local badge_h = 32     -- Adjust badge height
 -- stylua: ignore end
 
 local Font = require("ui/font")
-local FrameContainer = require("ui/widget/container/framecontainer")
 local TextWidget = require("ui/widget/textwidget")
-local logger = require("logger")
 local userpatch = require("userpatch")
 local Screen = require("device").screen
-local BD = require("ui/bidi")
 local Blitbuffer = require("ffi/blitbuffer")
 local IconWidget = require("ui/widget/iconwidget")
-local Size = require("ui/size")
 local percent_badge = IconWidget:new({ icon = "percent.badge", alpha = true })
+local logger = require("logger")
 
 local function patchCoverBrowserProgressPercent(plugin)
     -- Grab Cover Grid mode and the individual Cover Grid items
     local MosaicMenu = require("mosaicmenu")
     local MosaicMenuItem = userpatch.getUpValue(MosaicMenu._updateItemsBuildUI, "MosaicMenuItem")
+
+    if MosaicMenuItem.patched_percent_badge then
+        return
+    end
+    MosaicMenuItem.patched_percent_badge = true
 
     -- Store original MosaicMenuItem paintTo method
     local orig_MosaicMenuItem_paint = MosaicMenuItem.paintTo
