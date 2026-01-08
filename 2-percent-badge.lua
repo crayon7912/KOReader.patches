@@ -1,13 +1,14 @@
---[[ User patch for KOReader to add progress percentage badges in top right corner of cover ]]
+--[[ Patch to add progress percentage badges in top right corner of cover ]]
 --
 
 -- stylua: ignore start
 --========================== [[Edit your preferences here]] ================================
-local text_size = 0.42 -- Adjust from 0 to 1
-local move_on_x = 5    -- Adjust how far left the badge should sit.
-local move_on_y = -2   -- Adjust how far up the badge should sit.
-local badge_w = 70     -- Adjust badge width
-local badge_h = 32     -- Adjust badge height
+local text_size = 0.50	-- Adjust from 0 to 1
+local move_on_x = 5		-- Adjust how far left the badge should sit. 
+local move_on_y = -1	-- Adjust how far up the badge should sit.
+local badge_w = 70		-- Adjust badge width
+local badge_h = 40		-- Adjust badge height
+local bump_up = 1		-- Adjust text position  
 --==========================================================================================
 -- stylua: ignore end
 
@@ -99,7 +100,7 @@ local function patchCoverBrowserProgressPercent(plugin)
 
             local ts = percent_widget:getSize()
             local tx = bx + math.floor((BADGE_W - ts.w) / 2)
-            local ty = by + math.floor((BADGE_H - ts.h) / 2) - Screen:scaleBySize(1) -- tiny upward nudge
+            local ty = by + math.floor((BADGE_H - ts.h) / 2) - Screen:scaleBySize(bump_up) -- tiny upward nudge
             percent_widget:paintTo(bb, math.floor(tx), math.floor(ty))
         end
     end
