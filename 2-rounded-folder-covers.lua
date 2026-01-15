@@ -29,7 +29,9 @@ local logger = require("logger")
 local aspect_ratio = 2 / 3          -- adjust aspect ratio of folder cover
 local stretch_limit = 50            -- adjust the stretching limit
 local fill = false                  -- set true to fill the entire cell ignoring aspect ratio
-local file_count_size = 12          -- font size of the file count badge
+local file_count_size = 14          -- font size of the file count badge
+local folder_font_size = 20         -- font size of the folder name
+local folder_border = 0.5           -- thickness of folder border
 local folder_name = true            -- set to false to remove folder title from the center
 --======================================================================================
 
@@ -106,7 +108,7 @@ local Folder = {
         alpha = 0.75,
         nb_items_font_size = file_count_size,
         nb_items_margin = Screen:scaleBySize(5),
-        dir_max_font_size = 18,
+        dir_max_font_size = folder_font_size,
     },
 }
 
@@ -274,7 +276,7 @@ local function patchCoverBrowser(plugin)
             ImageWidget:new { image = img.data, width = image_width, height = image_height, stretch_limit_percentage = stretch_limit }
         
         local image_widget = FrameContainer:new {
-            padding = 0, bordersize = 0, image, overlap_align = "center",
+            padding = 0, bordersize = border_size, image, overlap_align = "center",
         }
 
         local image_size = image:getSize()
@@ -397,7 +399,7 @@ local function patchCoverBrowser(plugin)
         local image_x = fx + math.floor((frame_dimen.w - image_size.w) / 2)
         local image_y = fy + math.floor((frame_dimen.h - image_size.h) / 2)
         
-        local cover_border = Screen:scaleBySize(1)
+        local cover_border = Screen:scaleBySize(folder_border)
         bb:paintBorder(image_x, image_y, image_size.w, image_size.h, cover_border, Blitbuffer.COLOR_BLACK, 0, false)
 
         local TL, TR, BL, BR = corners.tl, corners.tr, corners.bl, corners.br
