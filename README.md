@@ -51,6 +51,14 @@ Download the icons `rounded.corner.bl.svg`, `rounded.corner.tl.svg`, `rounded.co
 
 **NOTE:** Please remove the cache and refetch all covers for this to work. Covers may not stretch on first browsing but it will be properly stretched when browsing through them again.
 
+## 🞂 [2-rounded-folder-covers.lua](https://github.com/SeriousHornet/KOReader.patches/blob/main/2-rounded-folder-covers.lua)
+
+<img width="720" height="359" alt="Rounded corners to folder covers" src="https://github.com/user-attachments/assets/da5c798b-fe27-4b4c-876f-5ffef699c894" />
+
+This patch adds rounded corners to folder covers in mosaic menu view. Also adds, folder name in the center and folder file count in the bottom right corner. 
+
+Download the icons `rounded.corner.bl.svg`, `rounded.corner.tl.svg`, `rounded.corner.br.svg` and `rounded.corner.tr.svg` from my icons folder and place the icons in `koreader/icons` in your e-reader.
+
 ## 🞂 [2-new-status-icons.lua](https://github.com/SeriousHornet/KOReader.patches/blob/main/2-new-status-icons.lua)
 
 <img width="561" height="174" alt="Custom status icons in black and white" src="https://github.com/user-attachments/assets/4da6bebf-3519-4e68-890d-7590c8bce622" />
@@ -95,7 +103,8 @@ This patch adds a small rectangular indicator to the top right of the book cover
 
 
 ## [2-series-badge-numbered.lua](https://github.com/SeriousHornet/KOReader.patches/blob/main/2-series-badge-numbered.lua)
-<img width="480" height="140" alt="msrdc_nTY5fVGvfJ" src="https://github.com/user-attachments/assets/56539347-a408-434c-bfb0-41290449bf24" />
+
+<img width="720" height="143" alt="Series number in badge" src="https://github.com/user-attachments/assets/fabc3cda-5f53-4c0b-acb3-c85e277c3d59" />
 
 This patch adds a small rounded series badge to the top right of the book cover to show the series number.
 
